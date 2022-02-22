@@ -36,7 +36,14 @@ const App = () => {
       </section>
       <section className="colors">
         {list.map((color, key) => {
-          return <SingleColor key={key} {...color} index={key} />;
+          return (
+            <SingleColor
+              key={key}
+              {...color}
+              index={key}
+              hexColor={color.hex}
+            />
+          );
         })}
       </section>
     </>
